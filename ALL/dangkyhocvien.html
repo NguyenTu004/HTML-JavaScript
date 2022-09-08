@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    .blue{
+      color: blue;
+    }
+    th {
+      text-align: left;
+      color: blue;
+      background-color: aquamarine;
+    }
+    table {
+      background-color: bisque;
+
+    }
+
+  </style>
+</head>
+<body>
+<form method="post">
+    <table >
+      <tr>
+        <th colspan="3">ĐĂNG KÝ HỌC VIÊN</th>
+      </tr>
+      <tr>
+        <td class="blue">Họ và tên</td>
+        <td><input type="text" name="Họ và tên" size="40"></td>
+      </tr>
+      <tr>
+        <td class="blue">Ngày sinh</td>
+        <td><input type="text" name="ngày sinh" size="25"></td>
+      </tr>
+      <tr>
+        <td class="blue">Giới tính</td>
+        <td>
+          <input type="radio" name="gender" value="nam" id="a1">
+          <label for="a1">nam</label>
+          <input type="radio" name="gender" value="nữ" id="a2">
+          <label for="a2">nữ</label>
+        </td>
+      </tr>
+      <tr>
+        <td class="blue">Địa chỉ</td>
+        <td>
+          <textarea name="dia chi" cols="30" rows="10"></textarea>
+        </td>
+      </tr>
+      <tr>
+        <td class="blue">Lớp</td>
+        <td>
+          <select >
+            <option value="0">--Chọn lớp--</option>
+            <option value="1">Lớp 1</option>
+            <option value="2">Lớp 2</option>
+            <option value="3">Lớp 3</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td class="blue">Email</td>
+        <td>
+          <input type="email" name="email" placeholder="email" size="30">
+        </td>
+      </tr>
+      <tr>
+        <td class="blue" rowspan="2">Điện thoại</td>
+        <td>
+          <input type="tel" name="phone" placeholder="phone" size="30">
+        </td>
+      </tr>
+      <tr>
+        <td><input type="submit" name="Đăng ký" value="Đăng ký">
+          <input type="reset" name="Nhập lại" value="Nhập lại">
+        </td>
+      </tr>
+
+    </table>
+</form>
+</body>
+</html>
