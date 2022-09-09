@@ -3,10 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="js51.js"></script>
+    <style>
+        table{
+            border-collapse: collapse;
+            border: 2px solid black;
+        }
+    </style>
+
 </head>
 <body>
-<table>
+<table border="2px">
     <tr>
         <th colspan="2">Caculator</th>
     </tr>
@@ -28,10 +34,12 @@
             <button type="button" onclick="divi()">Division(/)</button>
         </td>
     </tr>
+    <tr>
+        <td>Result Division:</td>
+        <td id="s3"></td>
+    </tr>
+
 </table>
-<h3>Result Division:</h3>
-<h3 id="s3"></h3>
-
 </body>
-
+<script src="js51.js"></script>
 </html>
