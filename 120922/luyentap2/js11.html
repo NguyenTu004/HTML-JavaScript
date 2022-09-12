@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+  let ttn=+prompt("Tong thu nhap ca nhan (tr)")
+  if (ttn>5 && ttn<10){
+      thue= 0.25+ttn*0.1
+      alert("Thue phai dong la (tr)"+thue)
+  }else if (ttn>10 && ttn<18){
+      thue= 0.75+ttn*0.15
+      alert("Thue phai dong la (tr)"+thue)
+  }else if (ttn>18 && ttn<32){
+      thue= 1.95+ttn*0.2
+      alert("Thue phai dong la (tr)"+thue)
+  }else if (ttn>32 && ttn<52){
+      thue= 4.75+ttn*0.25
+      alert("Thue phai dong la (tr)"+thue)
+  }else if (ttn>52 && ttn<80){
+      thue= 9.75+ttn*0.30
+      alert("Thue phai dong la (tr)"+thue)
+  }else if (ttn>80 ){
+      thue= 18.15+ttn*0.35
+      alert("Thue phai dong la (tr)"+thue)
+  }else {
+      thue=ttn*0.05
+      alert("Thue phai dong la (tr)"+thue)
+  }
+</script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+  let tg =+prompt("thoi gain su dung(phut)")
+  if (tg>0 && tg < 50){
+    tien= tg*0.6 + 25
+    alert("Phi thue bao la(nghin) " + tien)
+  }else if (tg>50 && tg < 200){
+    tien= 50*0.6 + 25 + tg*0.4
+    alert("Phi thue bao la(nghin) " + tien)
+  }else if (tg>200 ){
+    tien= 50*0.6 + 25 + 150*0.4 + tg*0.2
+    alert("Phi thue bao la(nghin) " + tien)
+  }else {
+    alert("khong xac dinh")
+  }
+
+</script>
+</html>

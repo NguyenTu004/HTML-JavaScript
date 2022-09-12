@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<form>
+  <img style="padding-left: 0 " id="bong" src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Football_%28soccer_ball%29.svg" style="width: 40%">
+  <p>Click button below to move the image to right</p>
+    <input type="button" value="Click" onclick="thuchien()">
+</form>
+</body>
+<script>
+function thuchien(){
+    let imgbong = document.getElementById("bong");
+    imgbong.style.paddingLeft=parseInt(imgbong.style.paddingLeft)+30+'px';
+    console.log(parseInt(imgbong.style.paddingLeft))
+}
+</script>
+</html>

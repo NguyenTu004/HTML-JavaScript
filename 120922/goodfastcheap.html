@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+
+  </style>
+</head>
+<body>
+<input value="0" type="range" id="good" min="0" max="50" step="50" onclick="good()">
+<input type="button" value="GOOD" ><br>
+<input value="0" type="range" id="cheap" min="0" max="50" step="50" onclick="cheap()">
+<input type="button" value="CHEAP" ><br>
+<input value="0" type="range" id="fast" min="0" max="50" step="50" onclick="fast()">
+<input type="button" value="FAST"><br>
+</body>
+<script>
+  function good(){
+    let a = document.getElementById("good").value;
+    let b = document.getElementById("cheap").value;
+    let c = document.getElementById("fast").value;
+    console.log(a)
+    console.log('_________'+b)
+    console.log('____________'+c)
+    if (a==='50'){
+      if ( b==='50'){
+        let fast = document.getElementById("fast");
+       fast.value = '0';
+      }
+    }
+  }
+
+
+  function cheap(){
+    let a = document.getElementById("good").value;
+    let b = document.getElementById("cheap").value;
+    let c = document.getElementById("fast").value;
+    console.log(a)
+    console.log('_________'+b)
+    console.log('____________'+c)
+    if (b==='50'){
+      if ( c==='50'){
+        let good = document.getElementById("good");
+        good.value = '0';
+      }
+    }
+
+  }
+
+
+  function fast(){
+    let a = document.getElementById("good").value;
+    let b = document.getElementById("cheap").value;
+    let c = document.getElementById("fast").value;
+    console.log(a)
+    console.log('_________'+b)
+    console.log('____________'+c)
+    if (a==='50'){
+      if ( c==='50'){
+        let cheap = document.getElementById("cheap");
+        cheap.value = '0';
+      }
+    }
+  }
+</script>
+</html>

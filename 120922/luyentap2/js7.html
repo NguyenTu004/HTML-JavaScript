@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+  let a=+prompt("nhap a")
+  let b=+prompt("nhap b")
+  let c=+prompt("nhap c")
+  let denta= b*b -4*a*c
+  let candenta= Math.sqrt(denta)
+  console.log(denta)
+  if (a!==0){
+    if (denta >0){
+      let x1=(-b+ candenta)/2*a
+      let x2=(-b- candenta)/2*a
+        document.write("nghiem x la"+ x1,"<br>"   )
+        document.write("nghiem x la"+ x2)
+    }
+    else {
+        let x3=(-b+Math.sqrt(-denta))/2*a
+        let x4=(-b-Math.sqrt(-denta))/2*a
+        document.write("nghiem phuc 1"+ x3,"<br>"    )
+        document.write("nghiem phuc 2"+ x4)
+    }
+  }else {
+      alert("day khong phai phuong trinh bac 2")
+      let x=-c/b
+      document.write("nghiem x la "+ x)
+  }
+</script>
+</html>

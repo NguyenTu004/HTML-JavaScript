@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body id="back">
+<div id="box" style="left: 900px;top: 500px">
+    <h2>Do you love me ????????</h2>
+    <input type="button" value="Yes" onclick="yes()">
+    <input id="nooo" type="button" value="No" onmouseover="no()" style="position: relative;top: 0;left: 0">
+</div>
+</body>
+<script>
+  function no(){
+     let not =document.getElementById("nooo");
+    not.style.top= (Math.floor(Math.random()*window.innerHeight*0.7))+'px' ;
+    not.style.left= (Math.floor(Math.random()*window.innerWidth*0.7))+'px' ;
+  }
+  function yes(){
+      alert("I love you babyy")
+
+  }
+</script>
+</html>
