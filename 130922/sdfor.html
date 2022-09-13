@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>JavaScript Loops</h2>
+<p id="output"></p>
+</body>
+<script>
+    {
+        let i;
+        let text = '';
+        for (i = 0; i < 5; i++) {
+            text += "The number is" + i + "<br>";
+        }
+        document.getElementById("output").innerHTML = text;
+    }
+  {
+      let num = +prompt("Enter your number: ");
+      let total = 0;
+      let i = 1;
+      for (; i <= num; i ++) {
+          total = total + i
+          console.log(total)
+          console.log("------"+i)
+      }
+  }
+</script>
+</html>

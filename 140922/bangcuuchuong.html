@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    {
+        let i;
+        let j;
+        let bang=0;
+        bang = "<table border='1' width='300' cellspacing='0' cellpadding= '3'>"
+        for (i =1; i <=20; i+=1) {
+            bang = bang + "<tr>";
+            for (j = 2; j <=9; j+=1) {
+                ketqua = i*j;
+                bang = bang + "<td>" + j+"x"+i+"="+ketqua + "</td>";
+
+            }
+            bang = bang + "</tr>"
+        }
+        bang = bang + "</table>"
+        console.log(bang)
+        document.write(bang)
+    }
+</script>
+</html>
