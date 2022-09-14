@@ -5,7 +5,7 @@
     <title>Title</title>
 </head>
 <body>
-
+<input id="output" type="button" value="Star" onclick="star()">
 </body>
 <script>
   //   // bai1
@@ -51,31 +51,38 @@
 // //bai4
 //   {
 //       let n =+prompt("Nhap so: ")
-//       let i;
-//       let a=1;
-//       let b=-1;
-//       // for (let j=0;j<=n;N++){
-//       //     for (i=1;i<=N;i+=1){
-//       //         let c=a;
-//       //         a=b+a;
-//       //         b=c;
-//       //         console.log(a)
-//       //         console.log(b)
-//       //         if (a%5===0){
-//       //             let a1 = a;
-//       //             document.write("So chia het cho 5 la "+a1+'<br>');
-//       //         }
+//       // let i;
+//       let N=0
+//       let count =0
+//       let a=1
+//       let b=-1
+//       // for (i=1;i<=n;i+=1){
+//       //     let c=a;
+//       //     a=b+a;
+//       //     b=c;
+//       //     console.log(a)
+//       //     console.log(b)
+//       //     if (a%5===0){
+//       //        let a1 = a;
+//       //         document.write("So chia het cho 5 la "+a1+'<br>');
 //       //     }
 //       // }
-//       for (i=1;i<=n;i+=1){
-//           let c=a;
-//           a=b+a;
-//           b=c;
-//           console.log(a)
-//           console.log(b)
-//           if (a%5===0){
-//              let a1 = a;
-//               document.write("So chia het cho 5 la "+a1+'<br>');
+//       {
+//           while (count<=n) {
+//               for (let i = 0; i <= N; i++) {
+//                   let c = a;
+//                   a = b + a;
+//                   b = c;
+//                   if (a % 5 === 0) {
+//                       chiahet = a;
+//                       document.write("So chia het cho " + 5 + " la " + chiahet + '<br>');
+//                       break;
+//                   }
+//                   if (flag){
+//                       count++;
+//                   }
+//               }
+//               N+=1;
 //           }
 //       }
 //   }
@@ -97,18 +104,53 @@
 //   //bai7
 //   {
 //       for (let i=1;i<=100;i+=1){
-//           if (i%3===0){
-//               if (i%5===0){
+//           if (i%3===0 && i%5===0){
 //                   console.log(i+"_FizzBuzz")
-//               }else {
-//                   console.log(i+"___Fizz")
-//               }
-//           }else if (i%5===0){
+//           }
+//           if (i%5===0){
 //               console.log(i+"_______Buzzz")
+//           }
+//           if (i%3===0){
+//               console.log(i+"_______Fizzz")
 //           }
 //       }
 //
 //   }
+//   //bai6
+//   {
+//       let n=+prompt("Nhap so: ");
+//       let i;
+//       let s=0;
+//       for (i=1;i<=n;i+=1){
+//           a=7*i;
+//           s=s+a;
+//           console.log(a)
+//       }
+//       document.write("Tong "+n+" so dau chia het cho 7 la "+s)
+//   }
   //bai8
+  {
+      function star(){
+          let i;
+          num= +prompt("Số bạn muốn đoán trong khoảng lớn nhất là bao nhiêu?");
+          for (i=1;1<=3;i+=1){
+              sodoan= +prompt("Nhập số bạn đoán")
+              if (sodoan<num){
+                  alert("Số bạn đoán nhỏ hơn")
+              }else if (sodoan>num){
+                  alert("Số bạn đoán lớn hơn")
+              }else if (sodoan===num){
+                  alert("oce nhakk")
+                  break;
+              }
+              if (i===3){
+                  alert("Bạn hết số lần đoán")
+                  break;
+              }
+          }
+          document.getElementById("output").innerText="Bạn hết số lần đoán";
+
+      }
+  }
 </script>
 </html>
