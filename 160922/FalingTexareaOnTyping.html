@@ -6,24 +6,27 @@
 </head>
 <body>
 <h2>Type anthing slowly</h2>
-<textarea id="out" onkeydown="down()"></textarea>
+<form name="f">
+<textarea id="out" name="txt" onkeydown="down()" style="width:350px;height:400px"></textarea>
+</form>
 </body>
 <script>
-  let arr = 'Toi la aiiiiiiiiiiiiiiiiiiiiiii❤❤❤';
+  let arr = 'I love you baeeeeeeee........❤❤❤';
   arr = arr.split('');
   let data = '';
   console.log(arr)
 function down(){
-  let type = document.getElementById("out").value;
+      let type=document.getElementById("out").value;
   for (let i=0 ; i <= type.length ; i++){
       data +=arr[i];
-      document.getElementById("out").innerText=data;
-      if (i===type.length){
-          document.getElementById("out").value;
-          data='';
-      }document.getElementById("out").innerText=data;
-      console.log(data)
-  }
+      if (i===arr.length) {
+          document.getElementById("out").value="";
+          data = '';
+      }
+  }document.getElementById("out").value=data;
+  data="";
+
+
 }
 
 </script>
