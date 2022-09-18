@@ -57,6 +57,21 @@
       // data +="<br><input type='button' value='Change Value' onclick='star1()' "
       display.innerHTML="<hr>"+data;
     }
+
+
+      for (let i=0;i<10;i++){
+          for (let j=0;j<10;j++) {
+              if (array[i][j]==='X' && array[i][j+1]==='X' && array[i][j+2]==='X' ||
+                    array[i][j]==='X' && array[i+1][j]==='X' && array[i+2][j]==='X'){
+                  alert("You Winnn")
+              }else if (array[i][j]==='O' && array[i+1][j]==='O' && array[i+2][j]==='O' ||
+                        array[i][j]==='O' && array[i][j+1]==='O' && array[i][j+2]==='O'){
+                  alert("You Win")
+              }
+          }
+
+      }
+
   }
   display.innerHTML="<hr>"+data;
 
