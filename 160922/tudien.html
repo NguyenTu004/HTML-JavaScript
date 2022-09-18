@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="input1">
+<input type="button" onclick="sta1()" value="Dich">
+<p id="output"></p>
+</body>
+<script>
+  let arr1 =["red","blue","black"]
+  let arr2 =["Đỏ","Xanh","Đen"]
+  let text ='';
+  function sta1(){
+      let a = document.getElementById("input1").value;
+    for (let i=0;i<arr1.length;i++){
+          if (a === arr1[i]){
+            text =arr2[i];
+          }
+            console.log(text)
+         }
+  }
+</script>
+</html>

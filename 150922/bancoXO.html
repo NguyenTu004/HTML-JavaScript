@@ -7,39 +7,58 @@
 <body>
 <h1>Caro Game Simple</h1>
 <p id="gamecaro"></p>
-<input type="button" value="Change Value" onclick="star()">
+<input type="button" value="Change Value" onclick="star1()">
 </body>
 <script>
+    let count=0;
   let display = document.getElementById("gamecaro")
   let array =[];
   let data='';
-  for (let i =0;i<5;i++){
-    array[i]=[0,0,0,0,0];
+  for (let i =0;i<10;i++){
+    array[i]=[0,0,0,0,0,0,0,0,0,0];
   }
-  for (let i =0;i<5;i++){
+  for (let i =0;i<10;i++){
     data += "<br>";
-    for (let j=0;j<5;j++){
+    for (let j=0;j<10;j++){
       data +=array[i][j]+"&nbsp;&nbsp;";
     }
   }
   data += "<br>"
   display.innerHTML=data;
 
-  function star(){
-        let ox = +prompt("X: ");
-        let oy = +prompt("Y: ");
-        data = "";
-        array[ox][oy]= "X";
-        for (let i=0;i<5;i++){
-          data += "<br>";
-          for (let j=0;j<5;j++){
-            data += array[i][j]+"&nbsp;&nbsp;&nbsp;";
+  function star1(){
+      count+=1;
+      if (count % 2===0){
+          let ox = +prompt("X: ");
+          let oy = +prompt("Y: ");
+          data = "";
+          array[ox][oy]= "O";
+          for (let i=0;i<10;i++){
+              data += "<br>";
+              for (let j=0;j<10;j++){
+                  data += array[i][j]+"&nbsp;&nbsp;&nbsp;";
+              }
           }
-        }
           console.log(data)
-        data +="<br><input type='button' value='Change Value' onclick='star()' "
-        display.innerHTML="<hr>"+data;
+          data +="<br><input type='button' value='Change Value' onclick='star1()' "
+          display.innerHTML="<hr>"+data;
+      }else {
+          let ox = +prompt("X: ");
+          let oy = +prompt("Y: ");
+          data = "";
+          array[ox][oy]= "X";
+          for (let i=0;i<10;i++){
+              data += "<br>";
+              for (let j=0;j<10;j++){
+                  data += array[i][j]+"&nbsp;&nbsp;&nbsp;";
+              }
+          }
+          console.log(data)
+          data +="<br><input type='button' value='Change Value' onclick='star1()' "
+          display.innerHTML="<hr>"+data;
+      }
   }
   display.innerHTML="<hr>"+data;
+
 </script>
 </html>

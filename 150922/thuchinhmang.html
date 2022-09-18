@@ -21,12 +21,11 @@
 
     }
     function display(){
-
-
-        let e="";
+        let data="";
         for (let i=0;i<array.length;i++){
-            e += "Element "+i+' = '+array[i] + "  ; ";
-        }document.getElementById("result").innerText=e;
+            data += "Element "+i+' = '+array[i] + "  ; ";
+            data += "<br>"
+        }document.getElementById("result").innerHTML=data;
     }
 </script>
 </html>
