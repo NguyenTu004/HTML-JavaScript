@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" onclick="star()" value="An thu xemm">
+</body>
+<script>
+  // //bai1
+  // {
+  //   function star(){
+  //     alert("??????????????")
+  //   }
+  // }
+  // //bai2
+  // {
+  //   function tang1(num) {
+  //     return num += 1;
+  //   }
+  //     function star() {
+  //     num = +prompt("Nhap so vo dayyy");
+  //     let num1= tang1(num)
+  //       alert(num1)
+  //   }
+  // }
+  // //bai3
+  // {
+  //   function Comparison(a,b){
+  //     if (a>b){
+  //       alert("So thu nhat lon hon so thu hai");
+  //     }else {
+  //       return a+b;
+  //     }
+  //   }
+  //   function star(){
+  //     let a = +prompt("Nhap so thu nhat: ");
+  //     let b = +prompt("Nhap so thu hai: ");
+  //     let out = Comparison(a,b);
+  //     alert("Tong 2 so la "+out)
+  //     console.log(out)
+  //   }
+  // }
+  // //bai4
+  // {
+  //   function addNumbers() {
+  //     firstNum = 4;
+  //     secondNum = 8;
+  //     result = firstNum + secondNum;
+  //     return result;
+  //   }
+  //   result = 0;
+  //   console.log(result)
+  //   result = addNumbers();
+  //   console.log("____"+result)
+  // }
+  //bai5
+  {
+    let NgoiSao =["Polaris", 'Aldebaran', 'Deneb', "Vega", 'Altair', 'Dubhe', 'Regulus'];
+    let ChomSao =['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major' , 'Leo'];
+    let flag = true
+    function check(tenSao){
+      for (let i=0; i<NgoiSao.length;i++){
+        if (tenSao===NgoiSao[i]){
+            let output = ChomSao[i];
+            alert(output)
+            flag = false
+            return output;
+        }
+      }
+      if (flag){
+          alert("Khong tim thay sao")
+        }
+    }
+    function star(){
+      let tenSao = prompt("Nhap ten ngoi sao: ");
+        console.log(tenSao)
+        check(tenSao)
+    }
+  }
+</script>
+</html>

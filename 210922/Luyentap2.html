@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+  // //bai1
+  // {
+  //     function soMu(number){
+  //         return number**2;
+  //     }
+  //     number= +prompt("Nhap so: ")
+  //     console.log(soMu(number))
+  // }
+  // //bai2
+  // {
+  //     let Pi = 3.14;
+  //     function Circuit(r){
+  //         return r*2*Pi;
+  //     }
+  //     function Area(r){
+  //         return r**2*Pi;
+  //     }
+  //     let r = +prompt("Nhap canh hinh tron: ");
+  //     console.log("Chu vi hinh tron la "+Circuit(r))
+  //     console.log("Dien tihc hinh tron la "+Area(r))
+  // }
+  // //bai3
+  // {
+  //     function i(number){
+  //         let tich=1;
+  //         for (let i=number;i>0;i--){
+  //             tich=tich *i
+  //         }return tich;
+  //     }
+  //     number = +prompt("Nhap so vo day nayyyyyyy");
+  //     console.log(i(number))
+  // }
+  // //bai4
+  // {
+  //     function check(test) {
+  //         if (Number.isFinite(test)){
+  //             alert("Du lieu o dang Number")
+  //         }else {
+  //             alert("Du lieu khong o dang Number")
+  //         }
+  //     }
+  //     let text = +prompt("Nhap o day nayyyy!!");
+  //     check(text)
+  // }
+  // //bai5
+  // {
+  //     let arr=[];
+  //     for (let i=0;i<3;i++){
+  //         arr[i]=Math.floor(Math.random()*999);
+  //     }
+  //     console.log(arr)
+  //     function Min(number){
+  //         let min = number[0]
+  //         for (let j=0;j<number.length;j++){
+  //             if (min>number[j]){
+  //                 min=number[j]
+  //             }
+  //         }return min;
+  //     }
+  //
+  //     console.log(Min(arr))
+  // }
+  // //bai6
+  // {
+  //     function check(number){
+  //         if (number>0){
+  //             alert("True")
+  //         }else if (number===0){
+  //             alert("000000000000000000000000")
+  //         }else {
+  //             alert("False")
+  //         }
+  //     }
+  //     let num = +prompt("Nhap so o day; ");
+  //     check(num);
+  // }
+  // //bai7
+  // {
+  //     function doiCho(a,b){
+  //         let c=a;
+  //             a=b;
+  //             b=c;
+  //         console.log("so 1 "+a)
+  //         console.log("so 2 "+ b)
+  //     }
+  //     a = +prompt("Nhap so1: ")
+  //     b = +prompt("Nhap so2: ")
+  //     doiCho(a,b)
+  // }
+  // //bai8
+  // {
+  //     let arr=[];
+  //     for (let i=0;i<20;i++){
+  //         arr[i]=Math.floor(Math.random()*99);
+  //     }
+  //     console.log(arr)
+  //     function daoNguoc(num){
+  //         num.reverse();
+  //         return num;
+  //     }
+  //
+  //     console.log(daoNguoc(arr))
+  // }
+  //bai9
+  {
+      let arr=[];
+      for (let i=0;i<20;i++){
+          arr[i]=Math.floor(Math.random()*10);
+      }console.log(arr)
+      function check(number){
+          let flag=true
+          let count = 0;
+          for (let i=0;i<arr.length;i++){
+              if (number===arr[i]){
+                  count++;
+                  flag=false;
+              }
+          }if (flag){
+              alert("-1")
+          }else {
+              console.log("So lan lap lai cua "+number+" la "+count)
+          }
+      }
+      let a = +prompt("Nhap so ban doan: ")
+      check(a)
+  }
+</script>
+</html>
