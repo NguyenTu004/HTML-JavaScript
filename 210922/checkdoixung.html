@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+
+let text = prompt("Nhap chu vo dayyyyy");
+    arr = text.split('');
+console.log(arr)
+isPalindrome(arr)
+function isPalindrome(arr){
+    let flag = true
+        if (arr[0]===arr[arr.length-1]){
+            for (let i=1;i<arr.length-1;i++){
+                if (arr[i]===arr[arr.length-(i+1)]){
+                    flag=true
+                }else {
+                    flag=false
+                }
+            }
+        }else {
+            flag=false
+        }
+        if (flag){
+            alert(text+" la chu doi xung")
+        }else {
+            alert("Sai roiii nhakkkk")
+        }
+}
+</script>
+</html>
