@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    class Battery{
+        constructor(pin) {
+            this.pin  = pin;
+        }
+        setpin(pin){
+            return this.pin=pin;
+        }
+        getPin(){
+            return this.pin;
+        }
+        decreasePin(){
+                if (this.pin>0){
+                    this.pin--;
+                }
+        }
+    }
+    class Flash{
+        constructor(battery) {
+            this.battery=battery;
+        }
+        setBattery(battery){
+            return this.battery=battery
+        }
+        getBattery(){
+            return this.battery.getPin();
+        }
+        light(){
+            if (this.star){
+                alert("Lighting")
+            }else {
+                alert("Not lighting")
+            }
+        }
+        turnOn(){
+            this.star=true;
+        }
+        turnOf(){
+            this.star=false;
+        }
+    }
+    let battery=new Battery();
+    battery.setpin(20);
+    let flash=new Flash();
+    flash.setBattery(battery)
+    console.log(flash.getBattery())
+    flash.light();
+    console.log("On")
+    flash.turnOn();
+    flash.light();
+    battery.decreasePin();
+    console.log(battery);
+    console.log(flash.getBattery())
+    flash.turnOf();
+    flash.light();
+    console.log(flash.getBattery())
+</script>
+</html>

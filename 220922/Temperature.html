@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+  let Tem=function (DoC){
+    this.DoC=DoC;
+    this.DoF=function (){
+      return 5/9*this.DoC+32;
+    }
+    this.DoK=function (){
+      return this.DoC+273.15;
+    }
+  }
+  let data=new Tem(25)
+  console.log(data)
+  console.log(data.DoF())
+  console.log(data.DoK())
+</script>
+</html>

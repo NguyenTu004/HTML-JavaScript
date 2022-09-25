@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="game"></div>
+</body>
+<script>
+    class Hero {
+        constructor(image, top, left, size) {
+            this.image = image;
+            this.top = top;
+            this.left = left;
+            this.size = size;
+        }
+
+        getHero() {
+            return `<img width="${this.size}" height="${this.size}"
+            src="${this.image}"
+            style="top: ${this.top}px; left: ${this.left}px;position: relative;"/>`;
+        }
+
+        moveRight() {
+            if (event.shiftKey){
+                this.left +=1200;
+            }else {
+                this.left += 30;
+            }
+        }
+
+        moveLeft() {
+            if (event.shiftKey){
+                this.left -=1200;
+            }else {
+                this.left -= 30;
+            }
+        }
+
+        moveBelow() {
+            if (event.shiftKey){
+                this.top +=1200;
+            }else {
+                this.top += 30;
+            }
+        }
+
+        moveTop() {
+            if (event.shiftKey){
+                this.top -=1200;
+            }else {
+                this.top -= 30;
+            }
+        }
+    }
+
+    function star() {
+            switch (event.keyCode) {
+                case  37:
+                    hero.moveLeft();
+                    break;
+                case 39:
+                    hero.moveRight();
+                    break;
+                case 38:
+                    hero.moveTop();
+                    break;
+                case 40:
+                    hero.moveBelow();
+                    break;
+        }
+        // console.log(hero.getHero())
+        document.getElementById("game").innerHTML = hero.getHero();
+    }
+    window.addEventListener('keydown', star);
+    let hero = new Hero('data:image/jpeg;base64,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',
+        30, 30, 100);
+    star()
+</script>
+</html>

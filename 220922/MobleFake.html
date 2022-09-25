@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+  <tr>
+    <td>
+      <h2 id="nokia"></h2>
+      <p id="nokia_pin"></p>
+      <input type="text" id="nokia_mess">
+      <br>
+      <label>Receive message: </label><p id="nokia_receive"></p>
+      <label>Sent message: </label><p id="nokia_send"></p>
+      <button onclick="Nokia()">SentMess</button>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <h2 id="iphone"></h2>
+      <p id="iphone_pin"></p>
+      <input type="text" id="iphone_mess">
+      <br>
+      <label>Receive message: </label><p id="iphone_receive"></p>
+      <label>Sent message: </label><p id="iphone_send"></p>
+      <button onclick="Iphone()">SentMess</button>
+    </td>
+  </tr>
+</table>
+</body>
+<script>
+  class Mobile{
+    name
+    pin
+    receiveMess
+    sendMess
+    constructor(name,pin) {
+      this.name=name
+      this.pin=pin
+      this.receiveMess=[]
+      this.sendMess=[]
+    }
+    SendMess(mess,phone){
+      this.sendMess.push(mess);
+      phone.receiveMess.push(mess)
+    }
+    UsePin(){
+      if (this.pin>0){
+        this.pin-=2;
+      }
+    }
+  }
+  let nokia = new Mobile('Nokia',100)
+  let iphone = new Mobile('Iphone',100)
+  function init(){
+    document.getElementById("nokia").innerHTML=nokia.name
+    document.getElementById("nokia_pin").innerHTML=nokia.pin
+    document.getElementById("iphone").innerHTML=iphone.name
+    document.getElementById("iphone_pin").innerHTML=iphone.pin
+  }
+  function Nokia(){
+    let mess = document.getElementById("nokia_mess").value;
+    nokia.SendMess(mess,iphone)
+    display()
+    nokia.UsePin()
+    document.getElementById("nokia_pin").innerHTML=nokia.pin
+  }
+  function Iphone(){
+    let mess = document.getElementById("iphone_mess").value;
+    iphone.SendMess(mess,nokia)
+    display()
+    iphone.UsePin()
+    document.getElementById("iphone_pin").innerHTML=iphone.pin
+  }
+  function display(){
+    document.getElementById("nokia_receive").innerHTML=nokia.receiveMess
+    document.getElementById("nokia_send").innerHTML=nokia.sendMess
+    document.getElementById("nokia_mess").innerHTML=""
+    document.getElementById("iphone_receive").innerHTML=iphone.receiveMess
+    document.getElementById("iphone_send").innerHTML=iphone.sendMess
+    document.getElementById("iphone_mess").innerHTML=""
+  }
+  window.onload=init
+</script>
+</html>

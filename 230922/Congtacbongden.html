@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  class ElectricLamp{
+    constructor(sta) {
+      this.sta=sta;
+    }
+    getSta(){
+      return this.sta;
+    }
+  }
+  class SwitchButton{
+    constructor(lamp,sta) {
+      this.lamp=lamp;
+      this.sta=sta
+    }
+    setLamp(lamp){
+        this.lamp=lamp;
+    }
+    getLamp(){
+        return this.lamp;
+    }
+    switchOn(){
+       this.lamp.sta=true;
+        return  this.sta=true;
+    }
+    switchOf(){
+        this.lamp.sta=false;
+        return this.sta=false;
+    }
+  }
+  let bong = new ElectricLamp(false);
+  let congtac = new SwitchButton(bong,false)
+  console.log(congtac.switchOn())
+  console.log(bong.getSta())
+  console.log(congtac.switchOf())
+  console.log(bong.getSta())
+</script>
+</body>
+</html>

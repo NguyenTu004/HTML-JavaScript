@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    class Cell {
+        constructor(x,y) {
+            this.x=x;
+            this.y=y;
+            this.value=1;
+        }
+        getHtml(){
+         let   cellHrml=`<div id="cell-${this.x}-${this.y}" onclick="play(${this.x},${this.y})"
+                        class="cell" style="position: absolute;top: ${this.x}*50px;left: ${this.y}*50px;
+                        line-height: 50px;"></div>`;
+         return cellHrml;
+        }
+        draw(){
+            let cellDiv=document.getElementById("cell-"+this.x+"-"+this.y);
+            switch (this.value){
+                case 2:
+                    cellDiv.innerHTML="X"
+                    break;
+                case 3:
+                    cellDiv.innerHTML="O"
+                    break;
+                default:
+                    cellDiv.innerHTML="X"
+                    break;
+            }
+        }
+    }
+    class Game {
+        constructor() {
+            this.cells = [];
+            this.turn=3;
+        }
+        draw(){
+            let a='';
+            a+="<table border='2' width='500px' height='500px'>"
+            for(let i = 0; i < 20; i++){
+                a+="<tr>"
+                let row = [];
+                this.cells.push(row);
+                for(let j = 0; j < 20; j++){
+                    a+="<td>"+[]+"</td>"
+                    let cell = new Cell(i, j);
+                    row.push(cell);
+                    a += cell.getHtml();
+                }
+            }document.write(a)
+        }
+        play(x,y){
+            let cell = this.cells([x][y]);
+            if (cell.value===1){
+                cell.value = this.turn;
+                cell.draw();
+                this.check(x,y);
+                if (this.turn===3){
+                    this.turn=2;
+                }else {
+                    this.turn=3;
+                }
+            }else {
+                alert("Cell is not empty");
+            }
+        }
+        check(x,y){
+
+        }
+}
+</script>
+</html>
