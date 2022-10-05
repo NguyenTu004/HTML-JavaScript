@@ -25,21 +25,23 @@
     }
   }
   class Human{
+      name
+      gender
+      weight
+      talk
     constructor(name,gender,weight,talk) {
       this.name=name;
       this.gender=gender;
       this.weight=weight;
       this.talk=talk;
+      this.apple=[];
     }
-    getName(name){
-      if (name==='nam'){
+    getGender(){
+      if (this.checkGender()){
         return true;
       }else {
         return false;
       }
-    }
-    getGender(){
-      return this.gender;
     }
     getWeight(){
       return this.weight;
@@ -52,6 +54,13 @@
     EatApple(){
       this.weight++;
     }
+    checkGender(){
+          if (this.gender=='nam'){
+              return true;
+          }else {
+              return false;
+          }
+    }
   }
   let apple = new Apple(20)
   let a=new Human('Adam','nam',100,'hmmm')
@@ -61,5 +70,6 @@
   a.getTalk()
   console.log(a)
   console.log(apple)
+
 </script>
 </html>

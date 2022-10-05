@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+  class Dv{
+    name
+    weight
+    speed
+    constructor(name,weight,speed) {
+      this.name=name
+      this.speed=speed
+      this.weight=weight
+    }
+  }
+  class mouse extends Dv{
+    live
+    sound
+    getLive(){
+      if (this.live){
+        alert("Chuot song")
+      }else {
+        alert("Cuot chet")
+      }
+    }
+    Die(){
+      return this.live=false;
+    }
+    Live(){
+      return this.live=true;
+    }
+    getSound(sound){
+      this.sound=sound;
+      alert(this.sound);
+    }
+  }
+  class cat extends Dv {
+      mouse=new mouse()
+
+      speedCat() {
+          if (this.mouse.speed < this.speed) {
+              alert("Meo bat duoc chuot")
+          } else {
+              alert("meo khong bat duoc chuot")
+          }
+      }
+
+      eat() {
+          if (this.mouse.live) {
+              this.weight = this.weight + this.mouse.weight
+              this.mouse.live = false;
+              alert("chuot die")
+          }
+      }
+  }
+  let Rat = new mouse("Rat", 10, 10);
+  let Tom = new cat("Tom", 20, 200, Rat);
+  console.log(Tom)
+  console.log(Rat)
+
+  Rat.Live()
+  Tom.speedCat();
+  Tom.eat();
+  console.log(Tom);
+
+</script>
+</html>
